@@ -6,7 +6,7 @@ const processors = [
     $.autoprefixer({browsers: ["last 4 version"]}),
     $.csso
 ];
-params.sass.push(...( params.levels.map( (level) => `blocks/**/${level}/*.scss`) ) );
+params.sass.push(...( params.levels.map( (level) => `components/**/${level}/*.scss`) ) );
 
 
 module.exports = () =>

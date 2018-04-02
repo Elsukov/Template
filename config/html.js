@@ -6,7 +6,7 @@ module.exports = function () {
     let dataLocals = {};
 
     try {
-        dataLocals = JSON.parse($.fs.readFileSync("./blocks/data.json", "utf8"));
+        dataLocals = JSON.parse($.fs.readFileSync("./components/data.json", "utf8"));
     } catch (e) {
         console.error(e);
     }

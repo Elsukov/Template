@@ -3,6 +3,6 @@
 const { plugins: $ } = require("./variables");
 
 module.exports = () =>
-    $.gulp.src("./blocks/data.json", {read: false})
+    $.gulp.src("./components/data.json", {read: false})
         .pipe($.plumber())
         .pipe($.clean());

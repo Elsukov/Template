@@ -20,10 +20,8 @@ const tasks = [
     [ "images" ],
     [ "libs" ],
     [ "webpack" ],
-    [ "js" ],
-    [ "jquery" ],
-    [ "createFirstLevelBlocks" ],
-    [ "createBlocks" ]
+    [ "createComponents" ],
+    [ "createComponentsStyles" ]
 ];
 
 gulp.task("default", ["server", "build"]);

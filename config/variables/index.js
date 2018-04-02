@@ -9,18 +9,18 @@ module.exports = {
         site    : "../backend/web/statics",
         htmlSrc : "pug/index.pug",
         levels: ["xs", "sm", "md", "lg", "xl"],
-        html: ["pug/*.pug", "blocks/**/*.pug"],
+        html: ["pug/*.pug", "components/**/*.pug"],
         blocksName : [
             "Header",
             "Footer",
         ],
         js: [
-            "blocks/index.js"
+            "components/index.js"
         ],
         libs : [
             "node_modules/cookiehunter/index.js"
         ],
-        json: "blocks/**/*.json",
+        json: "components/**/*.json",
         css: [],
         sass: [
             "setting.block/bootstrap.scss",
@@ -28,10 +28,10 @@ module.exports = {
         ],
         images: [],
         type: {
-            css   : "blocks/**/**/*.css",
-            sass  : "blocks/**/**/*.scss",
-            js    : "blocks/**/**/*.js",
-            images: "blocks/**/**/*.{gif,jpg,png,ico,svg}"
+            css   : "components/**/**/*.css",
+            sass  : "components/**/**/*.scss",
+            js    : "components/**/**/*.js",
+            images: "components/**/**/*.{gif,jpg,png,ico,svg}"
         }
     },
     plugins: {

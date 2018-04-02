@@ -6,7 +6,14 @@ let folder, file, fileJade, fileJs, fileJSON;
 
 module.exports = function () {
     for ( let blockName of params.blocksName ) {
-        folder     = `./blocks/${blockName}`; // ./blocks/example
+
+        folder = `./components/${blockName}`; // ./components/example
+
+        if (fs.existsSync(folder)) {
+            console.log("\x1b[33m", `----!NOTICE: Component "${blockName.toUpperCase()}" already exists!----`); 
+            continue;
+        }
+
         file       = `${folder}/${blockName}`; // File path
         fileJs     = `${file}.js`; // Careate js file
         fileJade   = `${file}.pug`; // Create pug file

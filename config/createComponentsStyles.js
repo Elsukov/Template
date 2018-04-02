@@ -23,12 +23,18 @@ const createLessFromJade = function (file, blockName, screen) {
 module.exports = function () {
     let contentFileJade;
     for ( let blockName of params.blocksName ) {
-        contentFileJade = fs.readFileSync(`./blocks/${blockName}/${blockName}.pug`, "utf8");
+        contentFileJade = fs.readFileSync(`./components/${blockName}/${blockName}.pug`, "utf8");
 
         for ( let level of params.levels ) {
             textCss  = createLessFromJade(contentFileJade, blockName, level);
 
-            folder   = `./blocks/${blockName}/${level}`; // ./blocks/example/xs.example
+            folder   = `./components/${blockName}/${level}`; // ./components/example/xs.example
+
+            if (fs.existsSync(folder)) {
+                console.log("\x1b[33m", `----!NOTICE: Component "${blockName.toUpperCase()}" already exists!----`); 
+                continue;
+            }
+
             file     = `${folder}/${blockName}`;
             fileCss  = `${file}.scss`;
 
