@@ -36,7 +36,6 @@ module.exports = {
     },
     plugins: {
         gulp         : require("gulp"),
-        rollup       : require("gulp-rollup"), 
         concat       : require("gulp-concat"),
         rename       : require("gulp-rename"),
         path         : require("path"),
