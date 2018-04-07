@@ -5,7 +5,11 @@ const { params, plugins: $ } = require("./variables");
 module.exports = function () {
 
     $.bs.init({
-        server: $.path.resolve(params.out)
+        files: ["./*.css", "./*.js", "./index.html"],
+        server: {
+            baseDir : $.path.resolve(params.out),
+            middleware : [historyApiFallback()]
+        }
     });
 
     $.gulp.watch(params.html, ["htmlReload"]);
