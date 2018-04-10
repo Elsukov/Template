@@ -40,6 +40,7 @@
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
     "postcss-csso": "^1.1.2",
-    "webpack": "^4.4.1"
+    "webpack": "^4.4.1",
+    "webpack-stream": "^4.0.3"
   }
 }

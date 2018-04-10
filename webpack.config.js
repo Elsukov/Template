@@ -2,7 +2,7 @@ const path = require('path');
 
 const config = {
     entry  : './components/index.js',
-    mode   : 'development',
+    // mode   : 'development',
     output : {
       filename: 'main.js',
       path: path.resolve(__dirname, 'public')
