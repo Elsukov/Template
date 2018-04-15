@@ -1,6 +1,7 @@
 "use strict";
 
 const { params, plugins: $ } = require("./variables");
+const historyApiFallback = require('connect-history-api-fallback');
 
 module.exports = function () {
 

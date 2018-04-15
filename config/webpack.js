@@ -1,13 +1,15 @@
 "use strict";
 
 const { params,  plugins : $ } = require("./variables");
-const webpackConfig = require('../webpack.config.js');
 const gutil = require("gulp-util");
-const webpack = require("webpack-stream");
+const webpackConfig = require('../webpack.config.js');
+const webpackGulp = require("webpack-stream");
+const webpack = require("webpack");
 
 module.exports = () => {
     return $.gulp.src('./components/index.js')
-        .pipe(webpack(webpackConfig))
+        .pipe(webpackGulp(webpackConfig, webpack))
+        .pipe($.gulp.dest(params.out))        
         .pipe($.gulp.dest(params.site))
         .pipe($.reload({ stream: true }));
 }
